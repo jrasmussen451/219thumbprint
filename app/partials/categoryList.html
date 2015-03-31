@@ -1,0 +1,18 @@
+<div class="panel-category-list no-panels" ng-show="currentCategory.SubCategories.length">
+    <loadingindicator ng-show="categoryLoadingIndicator" title="{{'Please wait while we fetch all categories' | r}}" />
+    <nav class="nav 451_lbl_subcatlist">
+        <ul class="cate">
+            <li class="col-lg-2 col-md-3 col-sm-3 col-xs-3 category-space" ng-repeat="c in currentCategory.SubCategories">
+                    <a class="shellAnchor" ng-href="catalog/{{c.InteropID}}">
+                            <figure class="shell" ng-show="c.Image.URL">
+                                <img class="img-responsive" ng-src="{{c.Image.URL}}"/>
+                            </figure>
+                        <div class="empty" ng-show="!c.Image.URL">
+                            <span class="fa empty"><i class="fa fa-camera"></i></span>
+                        </div>
+                        <h5 class="catName" ng-bind-html="c.Name" style="font-weight: bold"/>
+                    </a>
+            </li>
+        </ul>
+    </nav>
+</div>

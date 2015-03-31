@@ -1,0 +1,25 @@
+<section>
+
+	<nav id="451qa_nav_hdr" class="nav">
+        <ul>
+            <li>
+                <!-- <span id="451_lbl_curcat" class="text-primary" ng-bind-html="currentCategory.Name || '  {{'Categories' | r}}'"></span> -->
+            </li>
+            <li class="pull-right">
+                <a href="search">
+                    <span><i class="fa fa-search text-primary"></i></span>
+                </a>
+            </li>
+        </ul>
+    </nav>
+
+    <div class="col-collapse">
+
+        <categorylistview></categorylistview>
+
+        <loadingindicator ng-show="productLoadingIndicator" title="{{'Please wait while we fetch all products' | r}}"/>
+
+        <productlistview></productlistview>
+
+    </div>
+</section>

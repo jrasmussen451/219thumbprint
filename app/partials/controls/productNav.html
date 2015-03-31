@@ -1,0 +1,5 @@
+<ol class="breadcrumb">
+    <li><a href back-step class="back">Products</a></li>
+    <li><a href="product/{{LineItem.InteropID}}">{{product.Name}}</a></li>
+    <li ng-if="variant && variant.ExternalID"><a href="product/{{product.InteropID}}/{{variant.InteropID}}">{{variant.ExternalID}}</a></li>
+</ol>
