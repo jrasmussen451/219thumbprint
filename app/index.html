@@ -13,6 +13,8 @@
     <link href='//fonts.googleapis.com/css?family=Droid+Sans:400,700' rel='stylesheet' type='text/css' />
     <link href='//fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic' rel='stylesheet' type='text/css' />
     <link rel="stylesheet" href="css/animate.min.css" />
+    <!--custom css-->
+    <link rel="stylesheet" type="text/css" href="//cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.6.3/css/bootstrap-select.css">
     <!--[if lt IE 9]>
     <div style="position:absolute; top:0; left:0; right:0; bottom:0; background-position:center center; background-size:cover; background-repeat:no-repeat;"></div>
     <div style="margin:50px auto 0; max-width:600px; text-align: center; padding:20px; border:3px solid#f58220;font-family: Arial, Helvetica, sans-serif;">
@@ -62,7 +64,9 @@
     <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.2.15/angular-route.min.js" data-group="cdn"></script>
     <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.2.15/angular-touch.min.js" data-group="cdn"></script>
     <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.2.15/angular-loader.min.js" data-group="cdn"></script>
-
+<!--custom script-->
+    <script src="//cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.6.3/js/bootstrap-select.js" data-group="cdn"></script>
+    
     <script src="lib/store.js" data-group="resources"></script>
     <script src="lib/angular_ui/ui-utils.min.js" data-group="resources"></script>
     <script src="lib/angular_ui/ui-bootstrap-tpls-0.10.0.min.js" data-group="resources"></script>
@@ -188,7 +192,19 @@
     <script src="js/directives/creditcard.js" data-group="source"></script>
     <script src="js/directives/neworder.js" data-group="source"></script>
     <script src="js/directives/orderbuttons.js" data-group="source"></script>
+    
+    
+    <!--custom solutions script-->
     <script src="js/directives/productmatrix.js" data-group="source"></script>
+
+    <!--custom script-->
+    <script type="text/javascript">
+        $(document).on('click','.navbar-collapse.in',function(e) {
+            if( $(e.target).is('a') ) {
+                $(this).collapse('hide');
+            }
+        });
+    </script>
 </body>
 <!-- <![endif]-->
 </html>
