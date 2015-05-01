@@ -1,10 +1,10 @@
-<div class="login">
-    <div class="order-cloud-image" style="background: url('css/images/orderCloud.jpg') center center fixed;"></div>
+<div class="login" style="overflow:hidden; max-height: 600px;">
+    <div class="order-cloud-image img-responsive" style=""></div>
     <section class="order-cloud">
         <div id="login_box">
             <div id="login_form" class="animated bounceIn">
-                <form class="form-signin" ng-submit="login()" name="login_form">
-                    <h2 class="animated fadeIn text-center"><i class="fa fa-cloud"></i><br />{{'Order Cloud 2.0' | r}}</h2>
+                <form class="form-signin" ng-submit="login()" name="login_form" style="background:none no-repeat scroll 0% 0% ">
+                    <p class="animated fadeIn text-center"><img src="https://www.four51.com/images/company/3f0e94485b77450281990c6a76ba33fa.png" height="80%" width="80%" style="margin-left: 35px;" /></p>
                     <p id="451qa_msg_login" ng-show="loginMessage" ng-bind-html="loginMessage" class="alert alert-info"></p>
                     <div>
                         <div class="view-form-icon" ng-show="!showEmailHelp && !PasswordReset">
