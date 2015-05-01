@@ -218,6 +218,10 @@ h6,
     text-decoration: none;
 }
 
+.navbar {
+    min-height: 75px;
+}
+
 /*********************/
 /*---Secondary Nav---*/
 /*********************/
