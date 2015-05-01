@@ -2,10 +2,8 @@
     <div class="col-sm-12 view-form-icon">
         <div class="input-group">
             <label>{{'Name' | r | xlat}}</label>
-            <div class="deskLabel">
-                <input required class="form-control" type="text" ng-model="report.Name" placeholder="{{'Name' | r | xlat}}" />
-                <i class="fa fa-bookmark-o"></i>
-            </div>
+            <input required class="form-control" type="text" ng-model="report.Name" placeholder="{{'Name' | r | xlat}}" />
+            <i class="fa fa-bookmark-o"></i>
             <div class="input-group-btn">
                 <button type="submit" ng-disabled="reportForm.$invalid" class="btn btn-primary pull-right">
                     <span>{{'Save' | r | xlat}}</span>
@@ -18,24 +16,18 @@
         <h3>{{'Conditions' | r | xlat}}</h3>
         <div>
             <label>{{'Category' | r | xlat}}</label>
-            <div class="deskLabel">
-                <select class="form-control" ng-options="key as value for (key,value) in report.CategoryOptions" ng-model="report.Category"><option value=""></option></select>
-                <i class="fa fa-folder-open"></i>
-            </div>
+            <select class="form-control" ng-options="key as value for (key,value) in report.CategoryOptions" ng-model="report.Category"><option value=""></option></select>
+            <i class="fa fa-folder-open"></i>
         </div>
         <div>
             <label>{{'Approver' | r | xlat}}</label>
-            <div class="deskLabel">
-                <select class="form-control" ng-options="key as value for (key,value) in report.UserOptions" ng-model="report.User"><option value=""></option></select>
-                <i class="fa fa-folder-open"></i>
-            </div>
+            <select class="form-control" ng-options="key as value for (key,value) in report.UserOptions" ng-model="report.User"><option value=""></option></select>
+            <i class="fa fa-folder-open"></i>
         </div>
         <div ng-if="report.CostCenterOptions.length > 0">
             <label>{{'Cost Center' | r | xlat}}</label>
-            <div class="deskLabel">
-                <select class="form-control" ng-options="key as value for (key,value) in report.CostCenterOptions" ng-model="report.CostCenter"><option value=""></option></select>
-                <i class="fa fa-folder-open"></i>
-            </div>
+            <select class="form-control" ng-options="key as value for (key,value) in report.CostCenterOptions" ng-model="report.CostCenter"><option value=""></option></select>
+            <i class="fa fa-folder-open"></i>
         </div>
     </div>
     <div class="col-sm-6">
@@ -46,3 +38,4 @@
         </div>
     </div>
 </div>
+

@@ -2,7 +2,6 @@ four51.app.controller('ProductListCtrl', ['$routeParams', '$rootScope', '$scope'
 function ($routeParams,$rootScope, $scope, Product) {
     $scope.loadSearch = function(){
 
-
         if($scope.category && $scope.category.products){
             $scope.Products = $scope.category.products;
             return;
@@ -11,7 +10,7 @@ function ($routeParams,$rootScope, $scope, Product) {
         if($scope.category) {
             Product.search($scope.categoryInteropID, null, null, function(data) {
                 $scope.category.products = $scope.Products = data;
-                $scope.productCount = data.Count;
+	            $scope.productCount = data.Count;
             });
         }
     }

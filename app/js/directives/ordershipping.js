@@ -6,6 +6,9 @@ four51.app.directive('ordershipping', ['Order', 'Shipper', 'Address', 'AddressLi
 			AddressList.clear();
 			AddressList.shipping(function(list) {
 				$scope.shipaddresses = list;
+                if (list.length == 1 && !$scope.currentOrder.ShipAddressID) {
+                    $scope.currentOrder.ShipAddressID = list[0].ID;
+                }
 				if ($scope.isEditforApproval) {
 					if (!AddressList.contains($scope.currentOrder.ShipAddress))
 						$scope.shipaddresses.push($scope.currentOrder.ShipAddress);
@@ -38,7 +41,10 @@ four51.app.directive('ordershipping', ['Order', 'Shipper', 'Address', 'AddressLi
 				var auto = $scope.currentOrder.autoID;
 				Order.save($scope.currentOrder,
 					function(data) {
+                        //Due to order save race condition, BillAddressID was being set to null
+                        var billAddressID = $scope.currentOrder.BillAddressID;
 						$scope.currentOrder = data;
+                        $scope.currentOrder.BillAddressID = billAddressID;
 						$scope.displayLoadingIndicator = false;
 						if (auto) {
 							$scope.currentOrder.autoID = true;
@@ -115,6 +121,9 @@ four51.app.directive('ordershipping', ['Order', 'Shipper', 'Address', 'AddressLi
 						}
 						$scope.orderShipAddress = add;
 					});
+                    if (!$scope.currentOrder.IsMultipleShip()) {
+                        $scope.setShipAddressAtOrderLevel();
+                    }
 				}
 			});
 

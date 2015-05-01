@@ -2,10 +2,8 @@
     <div class="col-sm-12 view-form-icon">
         <div class="input-group">
             <label>{{'Name' | r | xlat}}</label>
-            <div class="deskLabel">
-                <input required class="form-control" type="text" ng-model="report.Name" placeholder="{{'Name' | r | xlat}}" />
-                <i class="fa fa-bookmark-o"></i>
-            </div>
+            <input required class="form-control" type="text" ng-model="report.Name" placeholder="{{'Name' | r | xlat}}" />
+            <i class="fa fa-bookmark-o"></i>
             <div class="input-group-btn">
                 <button type="submit" ng-disabled="reportForm.$invalid" class="btn btn-primary pull-right">
                     <span>{{'Save' | r | xlat}}</span>
@@ -18,10 +16,8 @@
         <h3>{{'Conditions' | r | xlat}}</h3>
         <div>
             <label>{{('Order' | r) + ' ' + ('ID' | r) | xlat}}</label>
-            <div class="deskLabel">
-                <input class="form-control" type="text" ng-model="report.ExternalID" placeholder="{{('Order' | r) + ' ' + ('ID' | r) | xlat}}" />
-                <i class="fa fa-external-link"></i>
-            </div>
+            <input class="form-control" type="text" ng-model="report.ExternalID" placeholder="{{('Order' | r) + ' ' + ('ID' | r) | xlat}}" />
+            <i class="fa fa-external-link"></i>
         </div>
         <daterange ng-options="report.TimeSpanOptions" fromdate="report.FromDate" todate="report.ToDate" />
     </div>
@@ -33,3 +29,4 @@
         </div>
     </div>
 </div>
+

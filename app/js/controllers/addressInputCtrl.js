@@ -1,15 +1,15 @@
 four51.app.controller('AddressInputCtrl', ['$scope', '$rootScope', '$location', 'User', 'Address', 'Resources',
 function ($scope, $rootScope, $location, User, Address, Resources) {
     $scope.save = function() {
-        $scope.objectExists = false;
+	    $scope.objectExists = false;
         Address.save(this.address,
-            function(address) {
+	        function(address) {
                 $rootScope.$broadcast('event:AddressSaved', address);
                 $location.path($scope.return);
             },
-            function(ex) {
-                if (ex.Code.is('ObjectExistsException'))
-                    $scope.objectExists = true;
+	        function(ex) {
+	            if (ex.Code.is('ObjectExistsException'))
+	                $scope.objectExists = true;
             }
         );
     };
@@ -19,9 +19,9 @@ function ($scope, $rootScope, $location, User, Address, Resources) {
         });
     };
 
-    $scope.cancel = function() {
-        $scope.return ? $location.path($scope.return) : $rootScope.$broadcast('event:AddressCancel');
-    };
+	$scope.cancel = function() {
+		$scope.return ? $location.path($scope.return) : $rootScope.$broadcast('event:AddressCancel');
+	};
 
     $scope.countries = Resources.countries;
     $scope.states = Resources.states;

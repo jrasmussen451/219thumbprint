@@ -17,17 +17,17 @@ four51.app.directive('categorylistview', function() {
 });
 
 four51.app.directive('shortproductview', function() {
-    var obj = {
-        restrict: "E",
-        scope: {
-            p: '=',
+	var obj = {
+		restrict: "E",
+		scope: {
+			p: '=',
             user: '='
-        },
-        templateUrl:'partials/controls/shortProductView.html',
-        controller: 'shortProductViewCtrl'
-    };
+		},
+		templateUrl:'partials/controls/shortProductView.html',
+		controller: 'shortProductViewCtrl'
+	};
 
-    return obj;
+	return obj;
 });
 
 four51.app.directive('shortproductviewinline', function() {
@@ -73,16 +73,16 @@ four51.app.directive('shortproductviewgallery', function() {
 });
 
 four51.app.directive('relatedproducts', function() {
-    var obj = {
-        scope: {
-            relatedgroupid: '='
-        },
-        restrict: 'E',
-        templateUrl: 'partials/relatedProductsView.html',
-        controller: 'RelatedProductsCtrl'
-    };
+	var obj = {
+		scope: {
+			relatedgroupid: '='
+		},
+		restrict: 'E',
+		templateUrl: 'partials/relatedProductsView.html',
+		controller: 'RelatedProductsCtrl'
+	};
 
-    return obj;
+	return obj;
 });
 
 four51.app.directive('pricescheduletable', function() {
@@ -101,56 +101,43 @@ four51.app.directive('pricescheduletable', function() {
 four51.app.directive('staticspecstable', function() {
     var obj = {
         scope: {
-            specgroups : '=',
-            length: '='
+			specgroups : '=',
+	        length: '='
         },
         restrict: 'E',
         templateUrl: 'partials/controls/staticSpecs.html',
-        controller: ['$scope', function($scope){
-            $scope.hasvisiblechild = function(specs){
-                var hasChild = false;
-                angular.forEach(specs, function(item){
-                    if(item.VisibleToCustomer)
-                        hasChild = true;
-                })
-                return hasChild;
-            }
-        }]
+		controller: ['$scope', function($scope){
+			$scope.hasvisiblechild = function(specs){
+				var hasChild = false;
+				angular.forEach(specs, function(item){
+					if(item.VisibleToCustomer)
+						hasChild = true;
+				})
+				return hasChild;
+			}
+		}]
     };
 
     return obj;
 });
 
 four51.app.directive('productnav', function() {
-    var obj = {
-        scope: {
-            category: '=',
-            product: '=',
-            variant: '=',
-            editvariant: '='
-        },
-        restrict: 'E',
-        templateUrl: 'partials/controls/productNav.html'
-    };
-    return obj;
+	var obj = {
+		scope: {
+			product: '=',
+			variant: '=',
+			editvariant: '='
+		},
+		restrict: 'E',
+		templateUrl: 'partials/controls/productNav.html'
+	};
+	return obj;
 });
-
-four51.app.directive('categorynav', function() {
-    var obj = {
-        scope: {
-            category: '=',
-        },
-        restrict: 'E',
-        templateUrl: 'partials/controls/categoryNav.html'
-    };
-    return obj;
-});
-
 
 four51.app.directive("variantlist", function() {
-    var obj = {
-        restrict: 'E',
-        templateUrl:'partials/controls/variantList.html'
-    };
-    return obj;
+	var obj = {
+		restrict: 'E',
+		templateUrl:'partials/controls/variantList.html'
+	};
+	return obj;
 });

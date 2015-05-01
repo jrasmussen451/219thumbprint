@@ -1,4 +1,4 @@
-four51.app.controller('CategoryCtrl', ['$routeParams', '$sce', '$scope', '$451', 'Category', 'Product', 'Nav', '$location', 
+four51.app.controller('CategoryCtrl', ['$routeParams', '$sce', '$scope', '$451', 'Category', 'Product', 'Nav',
 function ($routeParams, $sce, $scope, $451, Category, Product, Nav) {
 	$scope.productLoadingIndicator = true;
 	$scope.settings = {

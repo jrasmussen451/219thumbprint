@@ -1,11 +1,3 @@
-
-File Path:
-partials/orderPrintView.html
-
-
-
-Code:
-
 <section class="order-print-view">
     <div class="order-print-view-header">
         <div>
@@ -36,7 +28,7 @@ Code:
                     <p ng-show="order.FromUserFirstName || order.FromUserLastName">{{'Created By' | r | xlat}}: {{order.FromUserFirstName + ' ' + order.FromUserLastName}}</p>
                     <p ng-show="order.Comments">{{'Comments' | r | xlat}}: {{order.Comments}}</p>
                     <p ng-show="orderCostCenter">{{'Cost Center' | r | xlat}}: {{(order.LineItems.length == 1) && order.LineItems[0].CostCenter || null}}</p>
-                    <p>{{('Payment' | r) + ' ' + ('Method' | r) | xlat}}: {{order.PaymentMethodText}} <strong ng-show="order.CreditCard.Type">{{':' + order.CreditCard.DisplayName}}</strong></p>
+                    <p ng-show="order.PaymentMethod != 'Undetermined'">{{('Payment' | r) + ' ' + ('Method' | r) | xlat}}: {{order.PaymentMethodText}} <strong ng-show="order.CreditCard.Type">{{':' + order.CreditCard.DisplayName}}</strong></p>
                     <address ng-show="order.ShipAddress">
                         <span class="text-primary"><strong>{{'Ship to' | r | xlat}}</strong></span><br />
                         <span ng-show="order.LineItems[0].ShipFirstName || order.LineItems[0].ShipLastName">{{order.LineItems[0].ShipFirstName}} {{order.LineItems[0].ShipLastName}}</span>
@@ -46,7 +38,7 @@ Code:
                         {{order.ShipAddress.City}}, {{order.ShipAddress.State}} {{order.ShipAddress.Zip}}
                         <div ng-if="order.ShipAddress.Country != 'US'">{{order.ShipAddress.Country}}</div>
                     </address><br />
-                    <address ng-show="order.BillAddress">
+                    <address ng-show="order.BillAddress && order.BillingEnabled">
                         <span class="text-primary"><strong>{{'Bill to' | r | xlat}}</strong></span><br />
                         <span ng-show="order.BillFirstName || order.BillLastName">{{order.BillFirstName}} {{order.BillLastName}}</span>
                         <span ng-show="!order.BillFirstName || !order.BillLastName">{{order.BillAddress.FirstName}} {{order.BillAddress.LastName}}</span>

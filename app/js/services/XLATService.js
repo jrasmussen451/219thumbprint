@@ -1,9 +1,3 @@
-File Override:
-
-     js/services/XLATService.js
-
-Code: 
-
 four51.app.factory('XLATService', ['$interpolate', function($interpolate) {
 
     var currentLanguage = "en-US";
