@@ -2,7 +2,7 @@
 Static file for Theme changes
 Theme name: My SPA Theme
 Version: 1.0
-Template: Thumbprint - Default
+Template: Thumbprint - Park Ridge Health
 */
 
 /*New Colors
@@ -29,10 +29,10 @@ body {
     padding-top: 70px;
 }
 body a {
-    color: #007764;
+    color: #7DA0C3;
 }
 .text-primary {
-    color: #007764;
+    color: #7DA0C3;
 }
 .text-info {
     color: #53565a;
@@ -54,16 +54,17 @@ h6,
 .view-form-icon .quantity div input {
     border-radius: 4px;
 }
+
 /*----Buttons----*/
 .btn-primary {
-    background-color: #007764;
+    background-color: #7DA0C3;
 }
 .btn-primary,
 .btn-primary:hover {
     color: #FFFFFF;
 }
 .btn-primary {
-    border-color: #007764;
+    border-color: #7DA0C3;
 }
 .btn-primary:hover {
     background-color: #051118;
@@ -82,20 +83,17 @@ h6,
     background-color: #EBEBEB;
 }
 .btn-info {
-    background-color: #BCBCBB; /*secondary color*/
+    background-color: #bcbcbc;
 }
 .btn-info,
 .btn-info:hover {
     color: #FFFFFF;
 }
 .btn-info {
-    border-color: #BCBCBB; /*secondary color*/
+    border-color: #bcbcbc;
 }
 .btn-info:hover {
-    background-color: #848483; /*secondary color hover*/
-}
-.btn-info:active {
-    background-color: #848483; /*secondary color hover*/
+    background-color: #39B3D7;
 }
 .btn-success {
     background-color: #5CB85C;
@@ -139,10 +137,15 @@ h6,
 .btn-default .badge {
     background-color: #d23235;
 }
+.btn-info:hover, .btn-info:focus, .btn-info:active, .btn-info.active, .open .dropdown-toggle.btn-info{
+    background-color: #aaa;
+    border-color: #bcbcbb;
+}
+
 /*----alerts-----*/
 .alert-info {
-    background-color: rgba(0, 119, 100, 0.5);
-    border-color: rgba(0, 119, 100, 0.5);
+    background-color: rgba(125, 160, 195, 0.5);
+    border-color: rgba(125, 160, 195, 0.5);
     color: #fff;
 }
 /*********************/
@@ -159,7 +162,7 @@ h6,
     border-top: 3px solid #ccc;
 }
 .navbar-nav li.active a {
-    color: #007764 !important;
+    color: #7DA0C3 !important;
 }
 .navbar-default {
     border-color: #F0F0F0;
@@ -174,10 +177,10 @@ h6,
     color: #53565a;
 }
 .navbar-nav .dropdown-menu a {
-    color: #007764 !important;
+    color: #7DA0C3 !important;
 }
 .navbar-nav .dropdown-menu a:hover {
-    color: #007764 !important;
+    color: #7DA0C3 !important;
 }
 /*.staticNav .navbar-nav >
 .open > a, .staticNav .navbar-nav >
@@ -194,7 +197,7 @@ h6,
 }
 .navbar .container .navbar-nav.pull-right li a i:first-of-type,
 .navbar .container-view .navbar-nav.pull-right li a i:first-of-type {
-    border-color: #007764;
+    border-color: #7DA0C3;
 }
 .nav_logo {
     width: 216px;
@@ -217,7 +220,6 @@ h6,
 .rightUpper ul li {
     text-decoration: none;
 }
-
 /*********************/
 /*---Secondary Nav---*/
 /*********************/
@@ -234,7 +236,7 @@ h6,
 div.navbar.navbar-inverse.staticNav {
     min-height: 40px;
     height: 40px;
-    background-color: #007764;
+    background-color: #003768;
 }
 /*.navbar .container .navbar-nav.pull-right li a,
 .navbar .container-view .navbar-nav.pull-right li a
@@ -284,6 +286,9 @@ button {
 .navbar-fixed-bottom {
     margin-top: 200px;
 }
+.navbar-fixed-top {
+    border-bottom: 1px solid #ccc !important;
+}
 .navbar-collapse {
     z-index: 10;
 }
@@ -298,15 +303,6 @@ button {
 .navbar {
     border: none;
 }
-.navbar-fixed-top{
-    border-bottom: 1px solid #ccc;
-}
-
-.navbar-nav>li>a {
-    padding-bottom: 0px;
-    height: 45px;
-}
-
 /*********************/
 /*-------PANELS------*/
 /*********************/
@@ -356,7 +352,7 @@ div.product-hover {
       left: 0;
       right: 0;
       bottom: 0;*/
-    background-color: rgba(0, 119, 100, 0.8);
+    background-color: rgba(64, 126, 201, 0.8);
     -webkit-transition: all 200ms;
     -moz-transition: all 200ms;
     transition: all 200ms;
@@ -398,17 +394,17 @@ a.shell:focus {
     color: #d0d0d0;
 }
 .shell a:hover {
-    background-color: #F0F0F0;
+    background-color: rgba(125, 160, 195, 0.25);
 }
 a:hover {
-    background-color: #f0f0f0;
+    background-color: rgba(125, 160, 195, 0.25);
 }
 /*****************/
 /*----Footer----*/
 /****************/
 .thumbprint {
-  width: 222px;
-  height: 79.8px;
+  width: 166.5px;
+  height: 59.85px;
 }
 .vertical {
   height: 145px;
@@ -433,19 +429,56 @@ div.panel.panel-default {
 .cart {
     padding-top: 5px;
 }
+
+/*Credit Card*/
+.credit-card-widget div div div{
+    padding-bottom: 15px;
+}
+
+.ahsgrey {
+    background-color: #999999 !important;
+}
+
+.heartred {
+    background-color: #C1113B !important;
+}
+.bcapink {
+    background-color: #FF7BAC !important;
+}
+/*ul li.category-space:nth-child(15) a figure.shell{
+     background-color: #FF7BAC !important;
+}
+ul li.category-space:nth-child(14) a figure.shell{
+      background-color: #C1113B !important;
+}
+ul li.category-space:nth-child(13) a figure.shell, ul li.category-space:nth-child(12) a figure.shell{
+      background-color: #999999 !important;
+}*/
+/*ul li.category-space:nth-child(2) a figure.shell{
+      background-color: #D0E2EF !important;
+}*/
+
+.451_lbl_subcatlist{
+      margin-bottom: 50px !important;
+}
+
+.order-cloud .form-signin {
+    border: 1px solid #ccc;
+}
+
 /***********************/
 /*----MEDIA QUERIES----*/
 /***********************/
 @media (max-width: 768px) {
     .navbar-collapse {
-        background-color: #007764;
+        background-color: #7DA0C3;
     }
     .navbar-nav li.active > a,
     .navbar-nav li.dropdown > a,
     div.navbar.navbar-inverse.staticNav {
         min-height: 56px;
         height: 56px;
-        background-color: #007764;
+        background-color: #7DA0C3;
         padding-right: 0px;
         margin-bottom: 10px;
     }
@@ -489,12 +522,12 @@ div.panel.panel-default {
         width: 100px;
         height: 100px;
         padding: 0px;
-        margin-top: 65px;
+        margin-top: 85px;
     }
     .shell {
         width: 100px;
         height: 100px;
-        background: #007764;
+        background: #7DA0C3;
         /*border-radius: @rad10;*/
         overflow: hidden;
     }
@@ -529,7 +562,7 @@ div.panel.panel-default {
     .shell {
         width: 110px;
         height: 110px;
-        background: #007764;
+        background: #7DA0C3;
         /*border-radius: @rad10;*/
         overflow: hidden;
         /*padding-right: 15px;*/
@@ -544,7 +577,7 @@ div.panel.panel-default {
         margin-left: 48px;
     }
     .deskLabel {
-        padding-left: 25px;
+        padding-left: 30px;
     }
     .deskLabel .view-form-icon.view-form-icon-input-group input,
     .deskLabel .view-form-icon.view-form-icon-input-group select,
