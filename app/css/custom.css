@@ -145,6 +145,10 @@ h6,
     border-color: rgba(0, 119, 100, 0.5);
     color: #fff;
 }
+
+.order-cloud .form-signin{
+    border: 1px solid #ccc;
+}
 /*********************/
 /*----Nav BAR TOP----*/
 /*********************/
