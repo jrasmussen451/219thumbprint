@@ -223,7 +223,7 @@ h6,
 }
 
 .navbar {
-    min-height: 75px;
+    min-height: 85px;
 }
 
 /*********************/
@@ -231,7 +231,7 @@ h6,
 /*********************/
 .staticNav {
     height: 40px;
-    margin-top: 5px;
+    margin-top: 15px;
     /*margin-bottom: 19px;*/
 }
 .carta {
