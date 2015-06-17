@@ -189,6 +189,19 @@
     <script src="js/directives/creditcard.js" data-group="source"></script>
     <script src="js/directives/neworder.js" data-group="source"></script>
     <script src="js/directives/orderbuttons.js" data-group="source"></script>
+
+    
+    <!--custom solutions script-->
+    <script src="js/directives/productmatrix.js" data-group="source"></script>
+
+    <!--custom script-->
+    <script type="text/javascript">
+        $(document).on('click','.navbar-collapse.in',function(e) {
+            if( $(e.target).is('a') ) {
+                $(this).collapse('hide');
+            }
+        });
+    </script>
 </body>
 <!-- <![endif]-->
 </html>
