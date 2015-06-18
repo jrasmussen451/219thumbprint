@@ -48,7 +48,10 @@ function backtotop() {
     function template() {
         return [
             '<style> .scrollToTop {display:none; text-decoration: none;} </style>',
-            '<a href="#" title="{{hovertext}}" ng-style="myStyles" class="scrollToTop"><i class="fa fa-arrow-circle-up fa-3x text-info"></i></a>'
+            '<a href="#" title="{{hovertext}}" ng-style="myStyles" class="scrollToTop fa-stack fa-lg" >
+                <i class="fa fa-square fa-stack-2x"></i>
+                <i class="fa fa-chevron-up fa-stack-1x text-info"></i>
+               '
         ].join('');
     }
 }
