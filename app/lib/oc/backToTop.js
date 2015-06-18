@@ -51,7 +51,7 @@ function backtotop() {
             '<a href="#" title="{{hovertext}}" ng-style="myStyles" class="scrollToTop fa-stack fa-lg" >
                 <i class="fa fa-square fa-stack-2x"></i>
                 <i class="fa fa-chevron-up fa-stack-1x text-info"></i>
-               '
+               </a>'
         ].join('');
     }
 }
