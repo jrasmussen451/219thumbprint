@@ -156,19 +156,30 @@
                     </div>
                     <div style="padding-top: 10px;">
                         <span class="btn-group">
-                            <button ng-show="user.Permissions.contains('ShipToMultipleAddresses') && currentOrder.LineItems.length > 1" class="btn btn-default" ng-click="setSingleShipAddress()">
+                            <button 
+                            ng-if="user.Permissions.contains('ShipToMultipleAddresses') && currentOrder.LineItems.length > 1"
+                            ng-show="user.Permissions.contains('ShipToMultipleAddresses') && currentOrder.LineItems.length > 1" class="btn btn-default" 
+                            ng-click="setSingleShipAddress()">
                                 <i ng-class="{'fa fa-check': !currentOrder.IsMultipleShip() }"></i>
                                 {{'Single ' + ('Address' | r) | xlat}}
                             </button>
-                            <button ng-show="user.Permissions.contains('ShipToMultipleAddresses') && currentOrder.LineItems.length > 1" class="btn btn-default" type="button" ng-click="setMultipleShipAddress()">
+                            <button
+                            ng-if="user.Permissions.contains('ShipToMultipleAddresses') && currentOrder.LineItems.length > 1" 
+                            ng-show="user.Permissions.contains('ShipToMultipleAddresses') && currentOrder.LineItems.length > 1" class="btn btn-default" 
+                            type="button" 
+                            ng-click="setMultipleShipAddress()">
                                 <i ng-class="{'fa fa-check': currentOrder.IsMultipleShip() }"></i>
                                 {{'Multiple ' + ('Addresses' | r) | xlat}}
                             </button>
-                             <button class="btn btn-info pull-right" type="button"
-                                     ng-hide="(shipaddressform || (!shipaddressform && !shipaddresses) || !user.Permissions.contains('CreateShipToAddress'))" ng-click="shipaddressform = true" tabindex="-1">
+                             <button class="btn btn-info pull-right" 
+                             type="button"
+                             ng-if="!(shipaddressform || (!shipaddressform && !shipaddresses) || !user.Permissions.contains('CreateShipToAddress'))"
+                             ng-hide="(shipaddressform || (!shipaddressform && !shipaddresses) || !user.Permissions.contains('CreateShipToAddress'))" 
+                             ng-click="shipaddressform = true" 
+                             tabindex="-1">
                                  {{'New ' + ('Address' | r) | xlat}}
                              </button>
-                        </span>
+                        </span> 
                     </div>
                 </div>
             </form>
