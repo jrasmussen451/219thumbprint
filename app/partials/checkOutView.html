@@ -6,8 +6,8 @@
     </div>
     <div class="col-md-7 col-md-pull-5 col-collapse" ng-show="currentOrder && currentOrder.isEditable" ng-click="showSuccessAlert = false">
         <orderdetails ng-show="hasOrderConfig" />
-        <orderbilling />
         <ordershipping /> 
+        <orderbilling />
         <orderapprovals ng-show="currentOrder.Approvals" />
         <div class="navbar-fixed-bottom">
             <div class="view-response-message alert-success text-center" alert-show="actionMessage">
