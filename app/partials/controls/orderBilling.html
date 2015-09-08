@@ -15,6 +15,7 @@
                 <div>
                     <billingmessage />
                      <paymentselector></paymentselector>
+                     <sameasshipaddresscheckbox></sameasshipaddresscheckbox>
                     <div class="view-form-icon" ng-show="billaddresses.length > 0">
                         <div ng-class="{'view-form-select': !currentOrder.BillAddressID, '': currentOrder.BillAddressID }">
                             <label class="required">{{('Billing' | r) + ' ' + ('Address' | r) | xlat}}</label>
