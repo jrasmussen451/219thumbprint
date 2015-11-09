@@ -10,7 +10,7 @@
         <div class="row">
             <div class="col-sm-6 view-form-icon">
                 <div>
-                    <label ng-class="{'required': address.IsCustEditable != false}">{{('Address' | r) + ' ' + ('Name' | r) | xlat}}</label>
+                    <label ng-class="{'required': address.IsCustEditable != false}">{{('Address' | r) + ' ' + ('Nickname' | r) | xlat}}</label>
                     <input name="addressname" class="form-control" type="text" ng-model="address.AddressName" placeholder="{{('Address' | r) + ' ' + ('Name' | r) | xlat}}" autocomplete="off" ng-required="address.IsCustEditable != false" ng-disabled="address.IsCustEditable == false" />
                     <i class="fa fa-edit"></i>
                 </div>
